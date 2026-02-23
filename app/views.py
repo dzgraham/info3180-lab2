@@ -11,11 +11,15 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
+@app.route('/profile/')
+def profile():
+    return render_template('profile.html')
+
 
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Daniel Graham")
 
 
 ###
@@ -45,3 +49,11 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+from datetime import datetime
+
+@app.template_filter('format_date')
+def format_date_joined(date_input):
+    date_obj = datetime.strptime(date_input, "%Y-%m-%d")
+    return date_obj.strftime("%B, %Y")

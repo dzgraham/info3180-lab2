@@ -1,0 +1,48 @@
+{%extends "base.html" %}
+
+{% block main %}
+<head>
+    <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <div class="profile">
+
+    <div class="profile-card">
+      <div class="header">
+        <div class="avatar-container">
+            <img id="pic" src ="{{url_for('static', filename = 'daniel.jpg')}}">
+        </div>
+        <h1 class="name">Daniel Graham</h1>
+        <p class="handle">@dgray</p>
+        <p class="location">St. Andrew, Jamaica</p>
+        <p class="joined">Joined {{"2026-02-26" | format_date}}</p>
+      </div>
+
+      <div class="body">
+        <p class="bio">
+          I am a male 2nd year student at UWI Mona, pursuing a major in Computer Science.
+I am interested in Web Development because I would like to be a Webpage Designer part-time and I find the connection to networking to be quite interesting.
+        </p>
+
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-value">99</span>
+            <span class="stat-label">Posts</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">500</span>
+            <span class="stat-label">Following</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">15</span>
+            <span class="stat-label">Followers</span>
+          </div>
+        </div>
+
+        <button class="follow-btn">Follow</button>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
