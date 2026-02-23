@@ -11,14 +11,14 @@
 
 .profile-card {
   width: 350px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
 }
 
 .header {
-  background: linear-gradient(to bottom, #7db36d, #4b8a44);
+  background: linear-gradient(to bottom, red, blue);
   padding: 30px 20px;
   color: white;
 }
